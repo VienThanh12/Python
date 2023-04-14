@@ -1,0 +1,23 @@
+
+
+def everything_reversed(my_list):
+    new_list = []
+    for i in range(0, len(my_list)):
+        res = my_list[i]
+        j = len(res) - 1
+        ans = ""
+        while j >= 0:
+            ans = ans + res[j]
+            j -= 1
+        new_list.append(ans)
+    new_list_2 = []
+    i = len(new_list) - 1
+    while i >= 0:
+        new_list_2.append(new_list[i])
+        i -= 1
+    return new_list_2
+if __name__ == "__main__":
+    my_list = ["Hi", "there", "example", "one more"]
+    new_list = everything_reversed(my_list)
+    print(new_list) 
+
